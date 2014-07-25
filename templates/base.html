@@ -11,24 +11,6 @@
         <link rel="shortcut icon" href="/favicon.ico" />
 
         <link href="http://fonts.googleapis.com/css?family=Ubuntu:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css" />
-
-        {% if show_like_buttons %}
-            <!-- Google +1 button -->
-            <script type="text/javascript">
-                window.___gcfg = {lang: "ru"};
-
-                (function() {
-                    var po = document.createElement("script"); po.type = "text/javascript"; po.async = true;
-                    po.src = "https://apis.google.com/js/plusone.js";
-                    var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s);
-                })();
-            </script>
-
-            <!-- VKontakte "like" button -->
-            <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?34"></script>
-            <script type="text/javascript">VK.init({apiId: 3597691, onlyWidgets: true});</script>
-        {% endif %}
-
         {% block head %}{% endblock %}
     </head>
 
@@ -42,17 +24,6 @@
                         <span class="logo">ВКонтакте RSS</span> <span class="logo_beta">Beta</span>
                     </a>
                 </td>
-                {% if show_like_buttons %}
-                    <td valign="bottom">
-                        <!-- VKontakte like button -->
-                        <div id="vk_like"></div>
-                        <script type="text/javascript">VK.Widgets.Like("vk_like", {type: "mini"});</script>
-                    </td>
-                    <td valign="bottom">
-                        <!-- Google +1 button -->
-                        <div class="g-plusone" data-size="medium"></div>
-                    </td>
-                {% endif %}
             </tr></table>
 
             <div class="main_block">
@@ -60,28 +31,38 @@
             </div>
 
             <div class="footer">
-                &copy; <a href="mailto:Dmitry Konishchev &lt;konishchev@gmail.com&gt;" target="_blank">Дмитрий Конищев</a>&nbsp;&nbsp;
-                <a href="https://github.com/KonishchevDmitry/vkfeed" target="_blank">Исходный код</a>&nbsp;&nbsp;
-                Технологии <a href="http://code.google.com/appengine/" target="_blank">Google App Engine</a>
+                <a href="https://github.com/Ordinatus/vk-to-rss" target="_blank">Исходный код</a>&nbsp;&nbsp;
             </div>
         </div>
 
         {% if include_counters %}
             <!-- Yandex.Metrika counter -->
-                <div style="display:none;"><script type="text/javascript">
-                    (function(w, c) {
-                        (w[c] = w[c] || []).push(function() {
-                            try {
-                                w.yaCounter9836587 = new Ya.Metrika({id:9836587, enableAll: true});
-                            }
-                            catch(e) { }
-                        });
-                    })(window, "yandex_metrika_callbacks");
-                </script></div>
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter23605258 = new Ya.Metrika({id:23605258,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
 
-                <script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
-                <noscript><div><img src="http://mc.yandex.ru/watch/9836587" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-            <!-- /Yandex.Metrika counter -->
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/23605258" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
         {% endif %}
     </body>
 
