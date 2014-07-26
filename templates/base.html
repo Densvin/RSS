@@ -9,13 +9,13 @@
 
         <link rel="stylesheet" type="text/css" href="/css/style.css" />
         <link rel="shortcut icon" href="/favicon.ico" />
-
+        <script type="text/javascript" src="//vk.com/js/api/openapi.js?115"></script>
         <link href="http://fonts.googleapis.com/css?family=Ubuntu:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css" />
         {% block head %}{% endblock %}
     </head>
 
     <body lang="ru">
-        <div class="center page">
+        <div class="center">
             <table width="100%" cellspacing="0" cellpadding="0"><tr>
                 <td width="100%" valign="middle">
                     <!-- Site logo -->
@@ -29,8 +29,31 @@
             <div class="main_block">
                 {% block body %}{% endblock %}
             </div>
-
+        </div>
             <div class="footer">
+                        <div class="social">
+            <div id="vk_groups"></div>
+            <script type="text/javascript">
+            VK.Widgets.Group("vk_groups", {mode: 2, width: "300", height: "400"}, 49586226);
+            </script>
+            </div>
+            <div class="social">
+            <div id="fb-root"></div>
+                <script>(function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&appId=251131965069451&version=v2.0";
+                    fjs.parentNode.insertBefore(js, fjs);
+                    }
+                    (document, 'script', 'facebook-jssdk'));
+            </script>
+                <div class="fb-like-box" data-href="https://www.facebook.com/Ordinatus.IT" data-width="300" data-height="400" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false"></div>
+            </div>
+            <div class="social">
+                <a class="twitter-timeline" href="https://twitter.com/IT_ordinatus" data-widget-id="492785794029871106" data-link-color="#f96e5b" data-border-color="#e8e8e8" data-chrome="noborders noscrollbar transparent" data-tweet-limit="3" width="300" height="400" lang="RU">Твиты пользователя @IT_ordinatus</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+             </div>
                 <a href="https://github.com/Ordinatus/vk-to-rss" target="_blank">Исходный код</a>&nbsp;&nbsp;
             </div>
         </div>
