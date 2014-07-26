@@ -24,6 +24,9 @@ div.main_block {
 div.footer {
     margin-top: 5px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
 }
 
 
@@ -31,6 +34,13 @@ div.center {
     margin-left: auto;
     margin-right: auto;
 }
+
+div.social {
+    float: left;
+    width: 300px;
+    margin: 0 20px 0 0;
+}
+
 
 div.block:first-child {
     margin-top: 0;
