@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 ADMIN_EMAIL = 'Dmitry Konishchev <konishchev@gmail.com>'
 '''Email of the administrator.'''
 
-APP_URL = 'http://voltaic-cairn-724.appspot.com/'
+APP_URL = 'http://rss-vkon.appspot.com/'
 '''URL of the application.'''
 
 API_URL = 'http://api.vk.com/'
